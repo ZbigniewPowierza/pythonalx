@@ -5,10 +5,10 @@ skorzystaj z pętli for oraz funkcji range()
 
 """
 
-print(range(10))
+print(range(5))
 suma = 0
-for i in range(10):
+for i in range(5):
     x: int = int(input("Podaj liczbę"))
     suma = suma + x
-print(suma/10)
+print(suma/5)
 

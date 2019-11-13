@@ -37,60 +37,29 @@ Za [marchew] płacisz 7.05 PLN
 
 
 def wyprintuj(slownik, jednostka):
-
     for k, v in slownik.items():
-
         print(f" - {k}: {v} {jednostka}")
-
-
-
-
-
+    # for k in slownik.items(): #tak też będzie działać, ale prezentacja słownika gorzej wygląda
+    #     print(f" - {k}: {jednostka}")
 towary = {
-
     "marchew": 2.35,
-
     "ziemniaki": 2.2,
-
     "cebula": 1.8,
-
     "ogorki": 4,
-
 }
-
-
-
 magazyn = {
-
     "marchew": 40,
-
     "ziemniaki": 40,
-
     "cebula": 40,
-
     "ogorki": 40,
-
 }
-
-
 
 print("""
-
 Witaj w naszym PyZieleniaku!
-
-
 
 Oferujemy w atrakcyjnych cenach ekoprodukty:
 
 """)
-
-
-
-
-
-
-
-
 
 while True:
 
@@ -134,7 +103,7 @@ while True:
 
                 else:
 
-                    print("Ma za mało towaru")
+                    print("Mam za mało towaru")
 
             else:
 
@@ -160,14 +129,10 @@ while True:
 
             ile_do_dodania = int(input("Ile chcesz dodać? "))
 
-
-
             if not produkt_do_dodania in towary:
 
                 cena_nowego_pr = float(input("Jaka będzie cena? "))
 
                 towary[produkt_do_dodania] = cena_nowego_pr
-
-
 
             magazyn[produkt_do_dodania] = magazyn.get(produkt_do_dodania, 0) + ile_do_dodania
