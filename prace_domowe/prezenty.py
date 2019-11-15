@@ -15,8 +15,10 @@
 # # przemek kupuje prezent michał
 
 from random import shuffle
+
 osoby = ['marek', 'przemek', "michał", "kamila"]
 osoby2 = ['marek', 'przemek', "michał", "kamila"]
+
 
 def is_in_same_position(lista1, lista2):
     for i, os in enumerate(lista1):
@@ -25,13 +27,14 @@ def is_in_same_position(lista1, lista2):
             return True
     return False
 
+
 print(is_in_same_position(osoby, osoby2))
 
 while is_in_same_position(osoby, osoby2):
     print("Coś się powtarza")
     shuffle(osoby2)
 
-
+# lub w ten sposób robimy to samo co wyżej
 # while True:
 #     shuffle (osoby2)
 
