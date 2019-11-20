@@ -1,0 +1,42 @@
+>>> X
+{'A': 5, 'B': 5, 'C': 1}
+>>> for i in X:
+	print(i)
+
+	
+A
+B
+C
+
+>>> for i in X.items():
+	print(i)
+
+	
+('A', 5)
+('B', 5)
+('C', 1)
+
+>>> for i in X.items():
+	print(f"Klucz i wartość słownika {i}")
+
+	
+Klucz i wartość słownika ('A', 5)
+Klucz i wartość słownika ('B', 5)
+Klucz i wartość słownika ('C', 1)
+
+>>> for i, j in X.items():
+	print("Klucz słownika: ", i, "Wartość słownika: ", j)
+
+	
+Klucz słownika:  A Wartość słownika:  5
+Klucz słownika:  B Wartość słownika:  5
+Klucz słownika:  C Wartość słownika:  1
+
+# merge in dicts in one operation, łączenie słowników w jednej operacji
+>>> E = {'A': 5, 'B': 4}
+>>> print(E)
+{'A': 5, 'B': 4}
+>>> F = {'B': 5, 'C': 1}
+>>> X = {**E, **F}
+>>> X
+{'A': 5, 'B': 5, 'C': 1}

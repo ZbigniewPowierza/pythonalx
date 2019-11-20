@@ -12,7 +12,8 @@ po zakupie ilosc towaru sie zmniejsza
 jezeli ktos chce kupic wiecej niz w magazynie to mowie ze nie moze
 """
 def wyprintuj(dict, jednostka):
-    return print(f" - {dict}: {ilosc} kg")
+    for k, v in dict.items():
+        return print(f" - {k}: {v} ")
 
 slownik = {
     'marchew': 2.35,
@@ -30,8 +31,9 @@ magazyn = {
 }
 print("Witaj w naszym PyZieleniaku")
 print("OFERUJEMY NASTĘPUJĄCE PRODUKTY: ".title())
-for i in slownik:
-    print(f" - {i}: {slownik[i]}")
+# for i in slownik:
+#     print(f" - {i}: {slownik[i]}")
+wyprintuj(slownik, "PLN")
 # print(slownik.keys())
 while True:
     tryb = input("Wybierz tryb: [z-zakupowy], [m-magazynowy] [k-kończymy]")
