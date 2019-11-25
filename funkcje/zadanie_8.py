@@ -7,14 +7,27 @@
 
 lista = [10, 2, 5]
 
-# max_of_three = lista[0]
-# for i in lista:
-#     if i > max_of_three:
-#         max_of_three = i
-#     else:
-#         continue
-#
-# print(max_of_three)
+def max_of_two(x, y):
+    if x > y:
+        return x
+    return y
+def max_of_three(a, b, c):
+    if c > max_of_two(a, b):
+        return c
+    return max_of_two(a, b)
+
+print(max_of_three(100, 213, 0))
+print(max_of_three(-1, -2, 0))
+
+"""
+max_of_three = lista[0]
+for i in lista:
+    if i > max_of_three:
+        max_of_three = i
+    else:
+        continue
+
+print(max_of_three)
 
 def max_of_three(lista):
     wynik = lista[0]
@@ -27,6 +40,7 @@ def max_of_three(lista):
 
 print(max_of_three(lista))
 
+"""
 
 def max_of_three2(x, y, z):
     wynik2 = x
