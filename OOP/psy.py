@@ -34,9 +34,11 @@ print(azor, reks)
 # wynik <__main__.Pies object at 0x002AE148> <__main__.Pies object at 0x002AE340> - widac ze to inne adresy
 
 class Pies:
+    gatunek = "Canis Familiaris"
     def __init__(self, imie, waga):
         self.imie = imie
         self.waga = waga
 
     def szczekaj(self):
         print(f"(self.imie} szczeka")
+
