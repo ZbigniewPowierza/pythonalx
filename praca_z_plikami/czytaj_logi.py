@@ -11,7 +11,7 @@ zliczyć dla każdego użytkownika czas przebywania w systemie i posoartować i 
 with open ("dane\logs.txt") as f:
     rezultat = []
     for l in f:
-        rezultat = l.split(sep=";", 2)
+        rezultat = l.split(sep=";")
         print(l.split(";"))
         # print(l)
         #
