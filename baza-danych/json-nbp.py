@@ -2,11 +2,18 @@
 
 # https://pypi.org/  - morze bibliotek
 # istalacji poprzez terminal
+# pobieranie kursow walut via JSON z api.nbp.pl
 
 import requests
 import json
 
 url = "http://api.nbp.pl/api/exchangerates/tables/A?format=json"
+r = requests.get(url)
+print(r.text)
+json_data = json.loads(r.text)
+print(type(json_data[0]))
+nbp_data = json_data[0]
+print(nbp_data.keys())
 
 r = requests.get(url)
 # print(r.text)
@@ -30,3 +37,6 @@ for rate in rates:
 
 
 
+    if rate.get('code') == 'CHF':
+        print("-"*60)
+        print(f"{rate.get('currency')}\t\t\t{rate.get('code')}\t\t\t{rate.get('mid')}")
