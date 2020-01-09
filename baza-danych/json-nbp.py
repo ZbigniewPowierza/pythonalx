@@ -17,5 +17,8 @@ print(f"Data {nbp_data.get('effectiveDate')}")
 rates = nbp_data.get("rates")
 for rate in rates:
     if rate.get('code') == 'CHF':
-        print("-"*60)
+        print("-" * 60)
         print(f"{rate.get('currency')}\t\t\t{rate.get('code')}\t\t\t{rate.get('mid')}")
+
+# with open("chf.dat", "wt") as chf: # nie działa
+#     json.dump(rate, chf)
