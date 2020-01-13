@@ -1,0 +1,85 @@
+1.
+
+Na tabeli employees w schemacie HR wykonaj zapytanie, które wyświetli nazwiska tych pracowników, 
+którzy mają w nazwisku podwójne samogłoski.
+
+
+LAST_NAME
+-------------------------
+De Haan
+Greenberg
+Khoo
+Gee
+Greene
+Lee
+Bloom
+Feeney
+
+
+SELECT last_name
+FROM employees
+WHERE REGEXP_LIKE (last_name, '([aeiou])\1', 'i');
+
+
+2.
+
+Znajdź nazwiska i numery telefonów tych pracowników, którzy mają numery o schemacie: 
+3 cyfry, kropka, 3 cyfry, kropka, 4 cyfry i których ostatnia cyfra to 9.
+
+
+LAST_NAME                 PHONE_NUMBER       
+------------------------- --------------------
+De Haan                   515.123.4569        
+Austin                    590.423.4569        
+Greenberg                 515.124.4569        
+Faviet                    515.124.4169        
+Chen                      515.124.4269        
+Sciarra                   515.124.4369        
+Urman                     515.124.4469        
+Seo                       650.121.2019        
+Rajs                      650.121.8009        
+Geoni                     650.507.9879
+
+
+SELECT last_name, phone_number
+FROM employees
+WHERE REGEXP_LIKE (phone_number, '[[:digit:]]{3}\.[[:digit:]]{3}\.[[:digit:]]{3}9');
+
+
+3.
+
+Uruchom skrypt "Zestaw 7 - wyrazanie regularne - skrypt 1.txt".
+Napisz polecenie, które z tabeli tab73 wypisze te wiersze, które w danych mają rok równy lub wyższy niż 2016.
+
+
+DATA
+----------------------------
+FALL 2016
+CODE-A 2016 CODE-D
+
+
+SELECT *
+FROM   tab73
+WHERE  TO_NUMBER(REGEXP_SUBSTR(data, '\d{4}')) >= 2016;
+
+SELECT *
+FROM   tab73
+WHERE  TO_NUMBER(REGEXP_SUBSTR(data, '[[:digit:]]{4}')) >= 2016;
+
+
+4.
+
+Uruchom skrypt "Zestaw 7 - wyrazanie regularne - skrypt 2.txt".
+Napisz polecenie, które z tabeli tab74 wypisze te wiersze, które mają adres email niezgodny z ogólnie przyjętymi standardami.
+Oceń na podstawie danych w tabeli, które emaile wg Ciebie są niezgodne i odpowiednio przygotuj maskę wyrażenia regularnego.
+
+DATA
+--------------------------------------------------
+me@example
+@example.com
+me.me@ example.com
+
+
+SELECT data
+FROM   t1
+WHERE  NOT REGEXP_LIKE(data, '[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}', 'i');
