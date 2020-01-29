@@ -1,0 +1,300 @@
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\kurs\PycharmProjects\pythonalx\mysite\polls\admin.py", line 2,
+in <module>
+    from polls import Question, Choice
+ImportError: cannot import name 'Question' from 'polls' (C:\Users\kurs\PycharmPr
+ojects\pythonalx\mysite\polls\__init__.py)
+
+C:\Users\kurs\PycharmProjects\pythonalx\mysite>python manage.py createsuperuser
+Traceback (most recent call last):
+  File "manage.py", line 21, in <module>
+    main()
+  File "manage.py", line 17, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\core\management\__init__.py", line 401, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\core\management\__init__.py", line 377, in execute
+    django.setup()
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\apps\registry.py", line 122, in populate
+    app_config.ready()
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\contrib\admin\apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\contrib\admin\__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\site-packages\d
+jango\utils\module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "C:\Users\kurs\AppData\Local\Programs\Python\Python37\lib\importlib\__ini
+t__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "C:\Users\kurs\PycharmProjects\pythonalx\mysite\polls\admin.py", line 2,
+in <module>
+    from polls import Question, Choice
+ImportError: cannot import name 'Question' from 'polls' (C:\Users\kurs\PycharmPr
+ojects\pythonalx\mysite\polls\__init__.py)
+
+C:\Users\kurs\PycharmProjects\pythonalx\mysite>pip install ipython
+Requirement already satisfied: ipython in c:\users\kurs\appdata\local\programs\p
+ython\python37\lib\site-packages (7.8.0)
+Requirement already satisfied: pygments in c:\users\kurs\appdata\local\programs\
+python\python37\lib\site-packages (from ipython) (2.4.2)
+Requirement already satisfied: backcall in c:\users\kurs\appdata\local\programs\
+python\python37\lib\site-packages (from ipython) (0.1.0)
+Requirement already satisfied: prompt-toolkit<2.1.0,>=2.0.0 in c:\users\kurs\app
+data\local\programs\python\python37\lib\site-packages (from ipython) (2.0.10)
+Requirement already satisfied: colorama; sys_platform == "win32" in c:\users\kur
+s\appdata\local\programs\python\python37\lib\site-packages (from ipython) (0.4.1
+)
+Requirement already satisfied: setuptools>=18.5 in c:\users\kurs\appdata\local\p
+rograms\python\python37\lib\site-packages (from ipython) (40.8.0)
+Requirement already satisfied: jedi>=0.10 in c:\users\kurs\appdata\local\program
+s\python\python37\lib\site-packages (from ipython) (0.15.1)
+Requirement already satisfied: pickleshare in c:\users\kurs\appdata\local\progra
+ms\python\python37\lib\site-packages (from ipython) (0.7.5)
+Requirement already satisfied: decorator in c:\users\kurs\appdata\local\programs
+\python\python37\lib\site-packages (from ipython) (4.4.0)
+Requirement already satisfied: traitlets>=4.2 in c:\users\kurs\appdata\local\pro
+grams\python\python37\lib\site-packages (from ipython) (4.3.3)
+Requirement already satisfied: six>=1.9.0 in c:\users\kurs\appdata\local\program
+s\python\python37\lib\site-packages (from prompt-toolkit<2.1.0,>=2.0.0->ipython)
+ (1.12.0)
+Requirement already satisfied: wcwidth in c:\users\kurs\appdata\local\programs\p
+ython\python37\lib\site-packages (from prompt-toolkit<2.1.0,>=2.0.0->ipython) (0
+.1.7)
+Requirement already satisfied: parso>=0.5.0 in c:\users\kurs\appdata\local\progr
+ams\python\python37\lib\site-packages (from jedi>=0.10->ipython) (0.5.1)
+Requirement already satisfied: ipython-genutils in c:\users\kurs\appdata\local\p
+rograms\python\python37\lib\site-packages (from traitlets>=4.2->ipython) (0.2.0)
+
+You are using pip version 19.0.3, however version 20.0.2 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' comm
+and.
+
+C:\Users\kurs\PycharmProjects\pythonalx\mysite>python manage.py shell
+Python 3.7.4 (tags/v3.7.4:e09359112e, Jul  8 2019, 20:34:20) [MSC v.1916 64 bit
+(AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.8.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import os
+
+In [2]: os.gtcwd()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-2-d08a3504e899> in <module>
+----> 1 os.gtcwd()
+
+AttributeError: module 'os' has no attribute 'gtcwd'
+
+In [3]: os.gtcwd
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-3-90c2b553e252> in <module>
+----> 1 os.gtcwd
+
+AttributeError: module 'os' has no attribute 'gtcwd'
+
+In [4]: os.gtcwd()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-4-d08a3504e899> in <module>
+----> 1 os.gtcwd()
+
+AttributeError: module 'os' has no attribute 'gtcwd'
+
+In [5]: from polls.models import Question, Choice
+
+In [6]: Question.objects.all()
+Out[6]: <QuerySet [<Question: 1 | O której przerwa?>]>
+
+In [7]: Question.objects.all().query
+Out[7]: <django.db.models.sql.query.Query at 0x6b4d788>
+
+In [8]: str(Question.objects.all().query)
+Out[8]: 'SELECT "polls_question"."id", "polls_question"."question_text", "polls_
+question"."pub_date" FROM "polls_question"'
+
+In [9]: from django.utils import timezone
+
+In [10]: timezone.now()
+Out[10]: datetime.datetime(2020, 1, 29, 18, 50, 1, 44519, tzinfo=<UTC>)
+
+In [11]: import datetime
+
+In [12]: datetime.datetime.now()
+Out[12]: datetime.datetime(2020, 1, 29, 19, 50, 54, 669519)
+
+In [13]: d1 = timezone.now()
+
+In [14]: d2 = timezone.now()
+
+In [15]: d2 - d1
+Out[15]: datetime.timedelta(seconds=9, microseconds=62500)
+
+In [16]: d3 = datetime.datetime.now()
+
+In [17]: d3 - d1
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-17-a0d3a604ca5f> in <module>
+----> 1 d3 - d1
+
+TypeError: can't subtract offset-naive and offset-aware datetimes
+
+In [18]: q = Question()
+
+In [19]: q.question_text = "What's new?"
+
+In [20]: q.pub_date = d1
+
+In [21]: d1
+Out[21]: datetime.datetime(2020, 1, 29, 18, 51, 53, 763269, tzinfo=<UTC>)
+
+In [22]: q.id
+
+In [23]: q.save()
+
+In [24]: q.id
+Out[24]: 2
+
+In [25]: Question.objects.all()
+Out[25]: <QuerySet [<Question: 1 | O której przerwa?>, <Question: 2 | What's new
+?>]>
+
+In [26]: Question.objects.first()
+Out[26]: <Question: 1 | O której przerwa?>
+
+In [27]: Question.objects.last()
+Out[27]: <Question: 2 | What's new?>
+
+In [28]: Question.objects.filter(question_text="What's up")
+Out[28]: <QuerySet []>
+
+In [29]: Question.objects.filter(question_text="What's new")
+Out[29]: <QuerySet []>
+
+In [30]: Question.objects.filter(question_text="What's new?")
+Out[30]: <QuerySet [<Question: 2 | What's new?>]>
+
+In [31]: Question.objects.filter(question_text="What's new?")
+Out[31]: <QuerySet [<Question: 2 | What's new?>]>
+
+In [32]: Question.objects.first()
+Out[32]: <Question: 1 | O której przerwa?>
+
+In [33]: q1 = Question.objects.first()
+
+In [34]: q1
+Out[34]: <Question: 1 | O której przerwa?>
+
+In [35]: q1.choice_set
+Out[35]: <django.db.models.fields.related_descriptors.create_reverse_many_to_one
+_manager.<locals>.RelatedManager at 0x94505c8>
+
+In [36]: q1.choice_set.all()
+Out[36]: -----------------------------------------------------------------------
+----
+AttributeError                            Traceback (most recent call last)
+~\AppData\Local\Programs\Python\Python37\lib\site-packages\IPython\core\formatte
+rs.py in __call__(self, obj)
+    700                 type_pprinters=self.type_printers,
+    701                 deferred_pprinters=self.deferred_printers)
+--> 702             printer.pretty(obj)
+    703             printer.flush()
+    704             return stream.getvalue()
+
+~\AppData\Local\Programs\Python\Python37\lib\site-packages\IPython\lib\pretty.py
+ in pretty(self, obj)
+    400                         if cls is not object \
+    401                                 and callable(cls.__dict__.get('__repr__'
+)):
+--> 402                             return _repr_pprint(obj, self, cycle)
+    403
+    404             return _default_pprint(obj, self, cycle)
+
+~\AppData\Local\Programs\Python\Python37\lib\site-packages\IPython\lib\pretty.py
+ in _repr_pprint(obj, p, cycle)
+    695     """A pprint that just redirects to the normal repr function."""
+    696     # Find newlines and replace them with p.break_()
+--> 697     output = repr(obj)
+    698     for idx,output_line in enumerate(output.splitlines()):
+    699         if idx:
+
+~\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\quer
+y.py in __repr__(self)
+    253         if len(data) > REPR_OUTPUT_SIZE:
+    254             data[-1] = "...(remaining elements truncated)..."
+--> 255         return '<%s %r>' % (self.__class__.__name__, data)
+    256
+    257     def __len__(self):
+
+~\AppData\Local\Programs\Python\Python37\lib\site-packages\django\db\models\base
+.py in __repr__(self)
+    516
+    517     def __repr__(self):
+--> 518         return '<%s: %s>' % (self.__class__.__name__, self)
+    519
+    520     def __str__(self):
+
+~\PycharmProjects\pythonalx\mysite\polls\models.py in __str__(self)
+     16
+     17     def __str__(self):
+---> 18         return f"{self.id} | {self.question.question_text} | {self.choic
+e_text}"
+
+AttributeError: 'Question' object has no attribute 'question'
+
+In [37]: q1.choices.all()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-37-ad5a5d0279f9> in <module>
+----> 1 q1.choices.all()
+
+AttributeError: 'Question' object has no attribute 'choices'
+
+In [38]: q1 = Question.objects.first()
+
+In [39]: q1
+Out[39]: <Question: 1 | O której przerwa?>
+
+In [40]: q1.choices.all()
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+<ipython-input-40-ad5a5d0279f9> in <module>
+----> 1 q1.choices.all()
+
+AttributeError: 'Question' object has no attribute 'choices'
+
+In [41]: qs = Question.objects.all()
+
+In [42]: qs
+Out[42]: <QuerySet [<Question: 1 | O której przerwa?>, <Question: 2 | What's new
+?>, <Question: 3 | o której konkretnie>]>
+
+In [43]: str(qs)
+Out[43]: "<QuerySet [<Question: 1 | O której przerwa?>, <Question: 2 | What's ne
+w?>, <Question: 3 | o której konkretnie>]>"
+
+In [44]: for q in qs:
+    ...:     print(q)
+    ...:
+1 | O której przerwa?
+2 | What's new?
+3 | o której konkretnie
+
+In [45]:
