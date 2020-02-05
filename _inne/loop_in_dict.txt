@@ -40,3 +40,5 @@ Klucz słownika:  C Wartość słownika:  1
 >>> X = {**E, **F}
 >>> X
 {'A': 5, 'B': 5, 'C': 1}
+
+
