@@ -25,7 +25,7 @@ Klucz i wartość słownika ('B', 5)
 Klucz i wartość słownika ('C', 1)
 
 >>> for i, j in X.items():
-	print("Klucz słownika: ", i, "Wartość słownika: ", j)
+	print("Klucz słownika: ", i, ", Wartość słownika: ", j)
 
 	
 Klucz słownika:  A Wartość słownika:  5
